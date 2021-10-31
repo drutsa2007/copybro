@@ -56,7 +56,7 @@ select {outline: 0;}
 /* -------------------------------  BASE STYLES  ------------------------------- */
 
 body {font-family: 'Euclid Circular A', sans-serif; font-weight: 400; background: #fff; font-size: 14px; line-height: 1.2; color: #160F0F;}
-img {width: 100%;}
+
 
 .wrap {max-width: 1300px; padding: 0 60px; margin: 0 auto;}
 .title {font-size: 32px; font-weight: 500;}
@@ -71,3 +71,79 @@ img {width: 100%;}
 /* header */
 
 /* ... your code here ... */
+.container {margin:0 auto; padding:10px; color:#666;}
+.header {height:70px; display:flex; align-items: center; margin-bottom: 50px;
+    }
+.logo {width:64px; height:64px; margin-right: 10px;}
+.title-name {font-size:40px; font-weight:bold; color:#191970;}
+.setup {background:#4169E1; font-size:14px; color:#ffffff; padding:10px 20px;
+    border-radius:5px; border:none; height:34px; margin-left: auto;}
+.hidde {display:none;}
+
+.text-blue {color: #4169E1;}
+h1 {font-family: 'Euclid Circular A', sans-serif; font-size: 40px; font-weight:100;
+    }
+.caption-3 {text-align:center;}
+
+.block-1 {display:flex; margin-bottom: 100px;}
+.b1-img {width:55%; display:flex; align-items: center; justify-content: center;}
+.b1-break {width:5%;}
+.b1-text {width:40%; align-items: flex-start;}
+p {font-size:14px; font-weight: 200;}
+.over-img {position:relative; z-index:3; margin-top:-150px; float:right;}
+.b1-mini {position:relative; width:150px; color: #fff;
+    border-radius:10px; box-shadow:0px 0px 10px #666; font-size:30px; font-weight:bold;
+    text-align:center; padding: 70px 0 10px 0; float:left;
+    }
+.b1-mini span {font-size:12px; display:block;}
+.orange {background: linear-gradient(#FFFF00, #FF8C00); margin-top: -20px; margin-right:20px;}
+.cyan {background: linear-gradient(#87CEFA, #4169E1); margin-top: 0px; margin-right:20px;}
+.blue {background: linear-gradient(#9370DB, #483D8B); margin-top: -40px; margin-right:20px;}
+
+
+@media (max-width: 575.98px) {
+    .container {width:100%;}
+    .header {display:block; text-align: center;}
+    .logo {width:32px; height:32px; margin-right: 10px; margin-right: 0;}
+    .title-name {font-size:25px; font-weight:400; color:#191970;}
+    .setup {background:#4169E1; font-size:14px; color:#ffffff; padding:10px 20px;
+        border-radius:5px; border:none; height:34px; margin-left: auto; display:none;}
+    .hidde {display:flex; padding-top:20px; align-items: center; width:200px; margin:0 auto;}
+    .hidde img {width:24px;}
+    .hidde img {width:24px;}
+}
+@media (min-width:576px) and (max-width: 767.98px) {
+    .container {width:540px;}
+    .logo {width:48px; height:48px; margin-right: 10px;}
+    .title-name {font-size:30px; font-weight:400; color:#191970;}
+    .setup {background:#4169E1; font-size:14px; color:#ffffff; padding:10px 20px;
+        border-radius:5px; border:none; height:34px; margin-left: auto;}
+}
+@media (min-width:768px) and (max-width: 991.98px) {
+    .container {width:720px;}
+    .logo {width:48px; height:48px; margin-right: 10px;}
+    .title-name {font-size:30px; font-weight:400; color:#191970;}
+    .setup {background:#4169E1; font-size:14px; color:#ffffff; padding:10px 20px;
+        border-radius:5px; border:none; height:34px; margin-left: auto;}
+}
+@media (min-width:992px) and (max-width: 1199.98px) {
+    .container {width:960px;}
+    .logo {width:48px; height:48px; margin-right: 10px;}
+    .title-name {font-size:30px; font-weight:400; color:#191970;}
+    .setup {background:#4169E1; font-size:13px; color:#ffffff; padding:5px 10px;
+        border-radius:5px; border:none; height:34px; margin-left: auto;}
+}
+@media (min-width:1200px) and (max-width: 1399.98px) {
+    .container {width:1140px;}
+    .logo {width:64px; height:64px; margin-right: 10px;}
+    .title-name {font-size:40px; font-weight:bold; color:#191970;}
+    .setup {background:#4169E1; font-size:14px; color:#ffffff; padding:10px 20px;
+        border-radius:5px; border:none; height:34px; margin-left: auto;}
+}
+@media (min-width: 1400px){
+    .container {width:1320px;}
+    .logo {width:64px; height:64px; margin-right: 10px;}
+    .title-name {font-size:40px; font-weight:bold; color:#191970;}
+    .setup {background:#4169E1; font-size:14px; color:#ffffff; padding:10px 20px;
+        border-radius:5px; border:none; height:34px; margin-left: auto;}
+}

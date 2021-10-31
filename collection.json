@@ -111,6 +111,206 @@
 					"response": []
 				},
 				{
+					"name": "user.get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonRes = JSON.parse(responseBody);\r",
+									"\r",
+									"pm.globals.set(\"token\", jsonRes.response.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "{{v}}",
+								"type": "text"
+							},
+							{
+								"key": "project",
+								"value": "{{project}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"{{user_id}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user.get",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user.get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user.update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonRes = JSON.parse(responseBody);\r",
+									"\r",
+									"pm.globals.set(\"token\", jsonRes.response.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "v",
+								"value": "{{v}}",
+								"type": "text"
+							},
+							{
+								"key": "project",
+								"value": "{{project}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"{{user_id}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user.update",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user.update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notifications.get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonRes = JSON.parse(responseBody);\r",
+									"\r",
+									"pm.globals.set(\"token\", jsonRes.response.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "{{v}}",
+								"type": "text"
+							},
+							{
+								"key": "project",
+								"value": "{{project}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notification_id\": \"{{notification_id}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notifications.get",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notifications.get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notifications.read",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonRes = JSON.parse(responseBody);\r",
+									"\r",
+									"pm.globals.set(\"token\", jsonRes.response.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "v",
+								"value": "{{v}}",
+								"type": "text"
+							},
+							{
+								"key": "project",
+								"value": "{{project}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notification_id\": \"{{notification_id}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notifications.read",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notifications.read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "auth.logout",
 					"request": {
 						"auth": {

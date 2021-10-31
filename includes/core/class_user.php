@@ -56,12 +56,38 @@ class User {
 
     // TEST
 
-    public static function owner_info() {
-        // your code here ...
+    public static function owner_info($data = []) {
+        if (!$data) {
+            return response(error_response(2400, 'Data is empty.'));
+        }
+        return self::user_info(['user_id'=>$data['user_id']]);
     }
 
     public static function owner_update($data = []) {
-        // your code here ...
+        if (!$data) {
+            return response(error_response(2400, 'Data is empty.'));
+        }
+        if (!$data['first_name'] || !$data['last_name'] || !$data['phone']) {
+            return response(error_response(2400, 'All fields are required (first_name, last_name, phone).'));
+        }
+        $first_name = $data['first_name'];
+        $last_name = $data['last_name'];
+        $middle_name = $data['middle_name'] ?? '';
+        $email = strtolower($data['email']) ?? '';
+        $phone = preg_replace('~[^\d]+~', '', $data['phone']);
+        if ($phone[0] != '7') {
+            return response(error_response(2400, 'Phone must start with 7.'));
+        }
+        if (strlen($phone) != 11) {
+            return response(error_response(2400, 'Phone must be 11 digits long.'));
+        }
+        $update_text = "first_name='".$first_name."', ";
+        $update_text .= "last_name='".$last_name."', ";
+        $update_text .= "middle_name='".$middle_name."', ";
+        $update_text .= "email='".$email."', ";
+        $update_text .= "phone='".$phone."'";
+        DB::query("UPDATE users SET ".$update_text." WHERE user_id=1 LIMIT 1;") or die (DB::error());
+        return response(error_response(2200, 'Update user is success. Congratulation.'));
     }
 
 }
